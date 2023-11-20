@@ -104,7 +104,7 @@ li {
 }
 
 .left-container,
-.rigt-container {
+.right-container {
     width: 50%;
     box-sizing: border-box;
 }
@@ -115,11 +115,11 @@ li {
 
 .background-image,
 .background-color {
-    border-radius: 0 0.625rem 0 0.625rem 0;
+    border-radius: 0 0.625rem 0 0.625rem;
 }
 
 .background-image {
-    background-image: url('../images/image-header-desktop.jpg');
+    background-image: url("../images/image-header-desktop.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -133,3 +133,48 @@ li {
     z-index: 2;
  }
 
+@media(max-width: 48rem) {
+    main {
+        height: auto;
+        margin: 5em 0;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        width: 28.0625rem;
+        height: 100%;
+        text-align: center;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .left-container {
+        padding: 2.5rem;
+    }
+
+    .right-container {
+        height: 25rem;
+    }
+
+    .background-image {
+        background-image: url("../images/image-header-mobile.jpg");
+    }
+
+    p {
+        padding-bottom: 3.5rem;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .background-image,
+    .background-color {
+        border-radius: 0.625rem 0.625rem 0 0;
+    }
+}
